@@ -1,0 +1,42 @@
+               POSTGRES DATABASE CONNECTION
+
+
+This is database connectivity to my Assignment-2 node js API
+
+REQUIREMENTS:-
+1.Need Postgres database intall in your local                
+computer
+2.Postman for test API endpoints
+3.Node
+
+STEPS FOR RUN SUCESSFULLY:-
+
+1.download these file into your local computer in a folder
+2.open terminal(cmd/bash) in the same folder 
+3.Type following commands
+npm install ( for intall dependencies)
+tsc -w (install tsc by npm install -g tsc)       
+npm start (will run server on port 8080)
+4.run database on local computer 
+5.create database and a table with name users having columns:- id(PK), firstName, middleName, lastName, email, phoneNumber, role, address. 
+   
+5.EDIT db.ts file 
+ const client = new Client({
+  user: "postgres", //edit user database name
+  host: "localhost",
+  database: "users",
+  password: "123",//edit user password
+  port: 5432 // edit user port number
+})
+
+ENDPOINTS:-
+
+Test API through POSTMAN
+
+1.GET - http://localhost:8080/users/load //for loading json data into database
+2.GET - http://localhost:8080/users/  //for getting all users data
+3.POST - http://localhost:8080/users/{id} //for Update user data with specific id
+4.DELETE - http://localhost:8080/users/{id} //for delete user with specific id
+
+
+
